@@ -60,8 +60,7 @@
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Example:
-{ &#34;$join&#34; : { &#34;$joined&#34; : { &#34;dim&#34; : &#34;dimCollection&#34; }, &#34;$match&#34; : { &#34;$fuzzy&#34; : { &#34;anyNameWorksHere&#34; : { &#34;$expr&#34; : { &#34;$regex&#34; : [ &#34;$factField&#34;, &#34;$dim.$dimField&#34; ] } } } }, &#34;$project&#34; : { &#34;fact&#34; : &#34;$$ROOT&#34;, &#34;dim&#34; : &#34;$dim.$*&#34;, &#34;anyNameWorksHere&#34; : &#34;$$anyNameWorksHere&#34; } } } 
+		Fuzzy joins syntax { &#34;$join&#34; : { &#34;$joined&#34; : { &#34;dim&#34; : &#34;dimCollection&#34; }, &#34;$match&#34; : { &#34;$fuzzy&#34; : { &#34;anyNameWorksHere&#34; : { &#34;$expr&#34; : { &#34;$regex&#34; : [ &#34;$factField&#34;, &#34;$dim.$dimField&#34; ] } } } }, &#34;$project&#34; : { &#34;fact&#34; : &#34;$$ROOT&#34;, &#34;dim&#34; : &#34;$dim.$*&#34;, &#34;anyNameWorksHere&#34; : &#34;$$anyNameWorksHere&#34; } } } Example data &gt; db.factCollection.find() { &#34;_id&#34; : ObjectId(&#34;5f4b5ab953ce805278e48b21&#34;), &#34;factField&#34; : &#34;string&#34; } { &#34;_id&#34; : ObjectId(&#34;5f4b5ae453ce805278e48b22&#34;), &#34;factField&#34; : &#34;longerstring&#34; } &gt; db.
 	</div>
 </article>
 </main>

@@ -17,8 +17,7 @@
       <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://seperaGG.github.io/posts/fuzzy-joins/</guid>
-      <description>Example:
-{ &amp;#34;$join&amp;#34; : { &amp;#34;$joined&amp;#34; : { &amp;#34;dim&amp;#34; : &amp;#34;dimCollection&amp;#34; }, &amp;#34;$match&amp;#34; : { &amp;#34;$fuzzy&amp;#34; : { &amp;#34;anyNameWorksHere&amp;#34; : { &amp;#34;$expr&amp;#34; : { &amp;#34;$regex&amp;#34; : [ &amp;#34;$factField&amp;#34;, &amp;#34;$dim.$dimField&amp;#34; ] } } } }, &amp;#34;$project&amp;#34; : { &amp;#34;fact&amp;#34; : &amp;#34;$$ROOT&amp;#34;, &amp;#34;dim&amp;#34; : &amp;#34;$dim.$*&amp;#34;, &amp;#34;anyNameWorksHere&amp;#34; : &amp;#34;$$anyNameWorksHere&amp;#34; } } } </description>
+      <description>Fuzzy joins syntax { &amp;#34;$join&amp;#34; : { &amp;#34;$joined&amp;#34; : { &amp;#34;dim&amp;#34; : &amp;#34;dimCollection&amp;#34; }, &amp;#34;$match&amp;#34; : { &amp;#34;$fuzzy&amp;#34; : { &amp;#34;anyNameWorksHere&amp;#34; : { &amp;#34;$expr&amp;#34; : { &amp;#34;$regex&amp;#34; : [ &amp;#34;$factField&amp;#34;, &amp;#34;$dim.$dimField&amp;#34; ] } } } }, &amp;#34;$project&amp;#34; : { &amp;#34;fact&amp;#34; : &amp;#34;$$ROOT&amp;#34;, &amp;#34;dim&amp;#34; : &amp;#34;$dim.$*&amp;#34;, &amp;#34;anyNameWorksHere&amp;#34; : &amp;#34;$$anyNameWorksHere&amp;#34; } } } Example data &amp;gt; db.factCollection.find() { &amp;#34;_id&amp;#34; : ObjectId(&amp;#34;5f4b5ab953ce805278e48b21&amp;#34;), &amp;#34;factField&amp;#34; : &amp;#34;string&amp;#34; } { &amp;#34;_id&amp;#34; : ObjectId(&amp;#34;5f4b5ae453ce805278e48b22&amp;#34;), &amp;#34;factField&amp;#34; : &amp;#34;longerstring&amp;#34; } &amp;gt; db.</description>
     </item>
     
   </channel>
