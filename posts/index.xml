@@ -26,8 +26,9 @@
       <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://seperaGG.github.io/posts/subquery-in-a-different-database/</guid>
-      <description>Basic syntax:
-{ &amp;#34;$ns&amp;#34; : &amp;#34;databaseName.collectionName&amp;#34;, &amp;#34;$q&amp;#34; : {}, &amp;#34;$p&amp;#34; : {} } </description>
+      <description>By default subqueries are executed in the same database as the original query. This behaviour can be changed by appending database name in front of collection name:
+{ &amp;#34;$ns&amp;#34; : &amp;#34;databaseName.collectionName&amp;#34;, &amp;#34;$q&amp;#34; : {}, &amp;#34;$p&amp;#34; : {} } This is particularly useful when group_members collection needs to be referenced when working outside of sonargd database:
+{ &amp;#34;$ns&amp;#34; : &amp;#34;sonargd.group_members&amp;#34;, &amp;#34;$q&amp;#34; : { &amp;#34;Group Type&amp;#34; : &amp;#34;&amp;lt;Enter Group Type&amp;gt;&amp;#34;, &amp;#34;Group Description&amp;#34; : &amp;#34;&amp;lt;Enter Group Description&amp;gt;&amp;#34; }, &amp;#34;$p&amp;#34; : &amp;#34;Group Member&amp;#34; } </description>
     </item>
     
   </channel>
