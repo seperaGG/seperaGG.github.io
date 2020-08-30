@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on aurimasnotes</title>
-    <link>http://seperaGG.github.io/posts/</link>
-    <description>Recent content in Posts on aurimasnotes</description>
+    <title>fuzzy on aurimasnotes</title>
+    <link>http://seperaGG.github.io/tags/fuzzy/</link>
+    <description>Recent content in fuzzy on aurimasnotes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://seperaGG.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://seperaGG.github.io/tags/fuzzy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>http://seperaGG.github.io/posts/fuzzy-joins/</guid>
       <description>Example:
 { &amp;#34;$join&amp;#34; : { &amp;#34;$joined&amp;#34; : { &amp;#34;dim&amp;#34; : &amp;#34;dimCollection&amp;#34; }, &amp;#34;$match&amp;#34; : { &amp;#34;$fuzzy&amp;#34; : { &amp;#34;anyNameWorksHere&amp;#34; : { &amp;#34;$expr&amp;#34; : { &amp;#34;$regex&amp;#34; : [ &amp;#34;$factField&amp;#34;, &amp;#34;$dim.$dimField&amp;#34; ] } } } }, &amp;#34;$project&amp;#34; : { &amp;#34;fact&amp;#34; : &amp;#34;$$ROOT&amp;#34;, &amp;#34;dim&amp;#34; : &amp;#34;$dim.$*&amp;#34;, &amp;#34;anyNameWorksHere&amp;#34; : &amp;#34;$$anyNameWorksHere&amp;#34; } } } </description>
-    </item>
-    
-    <item>
-      <title>Subquery in a different database</title>
-      <link>http://seperaGG.github.io/posts/subquery-in-a-different-database/</link>
-      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://seperaGG.github.io/posts/subquery-in-a-different-database/</guid>
-      <description>Basic syntax:
-{ &amp;#34;$ns&amp;#34; : &amp;#34;databaseName.collectionName&amp;#34;, &amp;#34;$q&amp;#34; : {}, &amp;#34;$p&amp;#34; : {} } </description>
     </item>
     
   </channel>
