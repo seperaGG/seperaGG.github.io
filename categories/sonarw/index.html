@@ -50,7 +50,7 @@
 	<header class="list__header">
 		<h3 class="list__title post__title ">
 			<a href="/posts/subquery-operators/" rel="bookmark">
-			Subquery expression operators
+			Subquery operators
 			</a>
 		</h3>
 		<div class="list__meta meta">
@@ -60,7 +60,7 @@
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Subqueries always return an array of values:
+		Subquery always returns an array of values:
 &gt; db.mainColl.find() { &#34;_id&#34; : ObjectId(&#34;5f50ff25a91e9a0445274046&#34;), &#34;item&#34; : &#34;valueTwo&#34; } &gt; db.subqueryColl.find() { &#34;_id&#34; : ObjectId(&#34;5f50fe95a91e9a0445274044&#34;), &#34;something&#34; : &#34;valueOne&#34; } { &#34;_id&#34; : ObjectId(&#34;5f50fe9ca91e9a0445274045&#34;), &#34;something&#34; : &#34;valueTwo&#34; } &gt; db.mainColl.aggregate( ... [ ... { ... &#34;$project&#34; : { ... &#34;example&#34; : { ... &#34;$query&#34; : { ... &#34;$ns&#34; : &#34;subqueryColl&#34;, ... &#34;$q&#34; : { }, ... &#34;$p&#34; : &#34;something&#34; ... } ... } .
 	</div>
 </article><article class="list__item post">
@@ -108,7 +108,7 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/posts/subquery-operators/">Subquery expression operators</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/subquery-operators/">Subquery operators</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/fuzzy-joins/">Fuzzy joins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/subquery-in-a-different-database/">Subquery in a different database</a></li>
 		</ul>

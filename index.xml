@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Subquery expression operators</title>
+      <title>Subquery operators</title>
       <link>http://seperaGG.github.io/posts/subquery-operators/</link>
       <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>http://seperaGG.github.io/posts/subquery-operators/</guid>
-      <description>Subqueries always return an array of values:
+      <description>Subquery always returns an array of values:
 &amp;gt; db.mainColl.find() { &amp;#34;_id&amp;#34; : ObjectId(&amp;#34;5f50ff25a91e9a0445274046&amp;#34;), &amp;#34;item&amp;#34; : &amp;#34;valueTwo&amp;#34; } &amp;gt; db.subqueryColl.find() { &amp;#34;_id&amp;#34; : ObjectId(&amp;#34;5f50fe95a91e9a0445274044&amp;#34;), &amp;#34;something&amp;#34; : &amp;#34;valueOne&amp;#34; } { &amp;#34;_id&amp;#34; : ObjectId(&amp;#34;5f50fe9ca91e9a0445274045&amp;#34;), &amp;#34;something&amp;#34; : &amp;#34;valueTwo&amp;#34; } &amp;gt; db.mainColl.aggregate( ... [ ... { ... &amp;#34;$project&amp;#34; : { ... &amp;#34;example&amp;#34; : { ... &amp;#34;$query&amp;#34; : { ... &amp;#34;$ns&amp;#34; : &amp;#34;subqueryColl&amp;#34;, ... &amp;#34;$q&amp;#34; : { }, ... &amp;#34;$p&amp;#34; : &amp;#34;something&amp;#34; ... } ... } .</description>
     </item>
     
