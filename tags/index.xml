@@ -6,10 +6,19 @@
     <description>Recent content in Tags on aurimasnotes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://seperaGG.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>subquery</title>
+      <link>http://seperaGG.github.io/tags/subquery/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://seperaGG.github.io/tags/subquery/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>fuzzy</title>
@@ -26,15 +35,6 @@
       <pubDate>Sun, 30 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>http://seperaGG.github.io/tags/join/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>subquery</title>
-      <link>http://seperaGG.github.io/tags/subquery/</link>
-      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://seperaGG.github.io/tags/subquery/</guid>
       <description></description>
     </item>
     
