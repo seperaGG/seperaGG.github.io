@@ -54,16 +54,16 @@
 </div></div>
 		</header><div class="content post__content clearfix">
 			<h4 id="fuzzy-joins-syntax">Fuzzy joins syntax</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;$join&#34;</span> : {
-    <span style="color:#f92672">&#34;$joined&#34;</span> : {
-      <span style="color:#f92672">&#34;dim&#34;</span> : <span style="color:#e6db74">&#34;dimCollection&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{
+  <span style="color:#e6db74">&#34;$join&#34;</span> <span style="color:#f92672">:</span> {
+    <span style="color:#e6db74">&#34;$joined&#34;</span> <span style="color:#f92672">:</span> {
+      <span style="color:#e6db74">&#34;dim&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dimCollection&#34;</span>
     },
-    <span style="color:#f92672">&#34;$match&#34;</span> : {
-      <span style="color:#f92672">&#34;$fuzzy&#34;</span> : {
-        <span style="color:#f92672">&#34;anyNameWorksHere&#34;</span> : {
-          <span style="color:#f92672">&#34;$expr&#34;</span> : {
-            <span style="color:#f92672">&#34;$regex&#34;</span> : [
+    <span style="color:#e6db74">&#34;$match&#34;</span> <span style="color:#f92672">:</span> {
+      <span style="color:#e6db74">&#34;$fuzzy&#34;</span> <span style="color:#f92672">:</span> {
+        <span style="color:#e6db74">&#34;anyNameWorksHere&#34;</span> <span style="color:#f92672">:</span> {
+          <span style="color:#e6db74">&#34;$expr&#34;</span> <span style="color:#f92672">:</span> {
+            <span style="color:#e6db74">&#34;$regex&#34;</span> <span style="color:#f92672">:</span> [
               <span style="color:#e6db74">&#34;$factField&#34;</span>,
               <span style="color:#e6db74">&#34;$dim.$dimField&#34;</span>
             ]
@@ -71,10 +71,10 @@
         }
       }
     },
-    <span style="color:#f92672">&#34;$project&#34;</span> : {
-      <span style="color:#f92672">&#34;fact&#34;</span> : <span style="color:#e6db74">&#34;$$ROOT&#34;</span>,
-      <span style="color:#f92672">&#34;dim&#34;</span> : <span style="color:#e6db74">&#34;$dim.$*&#34;</span>,
-      <span style="color:#f92672">&#34;anyNameWorksHere&#34;</span> : <span style="color:#e6db74">&#34;$$anyNameWorksHere&#34;</span>
+    <span style="color:#e6db74">&#34;$project&#34;</span> <span style="color:#f92672">:</span> {
+      <span style="color:#e6db74">&#34;fact&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$$ROOT&#34;</span>,
+      <span style="color:#e6db74">&#34;dim&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$dim.$*&#34;</span>,
+      <span style="color:#e6db74">&#34;anyNameWorksHere&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;$$anyNameWorksHere&#34;</span>
     }
   }
 }
@@ -84,11 +84,9 @@
 { <span style="color:#e6db74">&#34;_id&#34;</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">ObjectId</span>(<span style="color:#e6db74">&#34;5f4b5ae453ce805278e48b22&#34;</span>), <span style="color:#e6db74">&#34;factField&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;longerstring&#34;</span> }
 <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">dimCollection</span>.<span style="color:#a6e22e">find</span>()
 { <span style="color:#e6db74">&#34;_id&#34;</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">ObjectId</span>(<span style="color:#e6db74">&#34;5f4b5b3153ce805278e48b23&#34;</span>), <span style="color:#e6db74">&#34;dimField&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;longer&#34;</span> }
-</code></pre></div>
-<h4 id="output">Output</h4>
+</code></pre></div><h4 id="output">Output</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">{ <span style="color:#e6db74">&#34;fact&#34;</span> <span style="color:#f92672">:</span> { <span style="color:#e6db74">&#34;_id&#34;</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">ObjectId</span>(<span style="color:#e6db74">&#34;5f4b5ae453ce805278e48b22&#34;</span>), <span style="color:#e6db74">&#34;factField&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;longerstring&#34;</span> }, <span style="color:#e6db74">&#34;dim&#34;</span> <span style="color:#f92672">:</span> { <span style="color:#e6db74">&#34;_id&#34;</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">ObjectId</span>(<span style="color:#e6db74">&#34;5f4b5b3153ce805278e48b23&#34;</span>), <span style="color:#e6db74">&#34;dimField&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;longer&#34;</span> }, <span style="color:#e6db74">&#34;anyNameWorksHere&#34;</span> <span style="color:#f92672">:</span> { <span style="color:#e6db74">&#34;expr&#34;</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }, <span style="color:#e6db74">&#34;_id&#34;</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">ObjectId</span>(<span style="color:#e6db74">&#34;5f4b5ae453ce805278e48b22&#34;</span>) }
 </code></pre></div>
-
 		</div>
 		<footer class="post__footer">
 			
